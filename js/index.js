@@ -14,14 +14,14 @@ $(function () {
         //取消事件冒泡  
         event.stopPropagation();  
         //按钮的toggle,如果是可见的,点击按钮切换为隐藏的;如果是隐藏的,切换为可见的。  
-        $('.drop ul').toggle(400);  
+        $('.drop ul').toggle();  
         return false;
     });  
     //点击空白处隐藏弹出层，下面为滑动消失效果和淡出消失效果。
     $(document).click(function(event){
             var _con = $('.drop ul');   // 设置目标区域
             if(!_con.is(event.target) && _con.has(event.target).length === 0){ 
-                $('.drop ul').hide(300);          //淡出消失
+                $('.drop ul').hide();          //消失
             }
     });
 });
